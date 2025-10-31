@@ -237,23 +237,39 @@ nav a:hover { color: #007bff; }
   font-style: italic;
 }
 
-/* Contact Section */
 .contact-container {
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  gap: 1.5rem; /* spacing between items */
 }
 
 .contact-item {
   background: white;
-  padding: 0.8rem 1.5rem;
+  padding: 1.5rem 2rem; /* same as other cards */
   border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  width: 100%; /* full width of container */
+  max-width: 900px; /* same as .section max-width */
+  margin: 0 auto; /* center horizontally */
+  
   display: flex;
+  justify-content: space-between; /* space icons evenly */
   align-items: center;
-  gap: 0.5rem;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
+.contact-item a {
+  flex: 1; /* optional: each link takes equal space */
+  text-align: center; /* center text/icon */
+  color: #007bff;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
 
 .contact-item:hover {
   transform: translateY(-2px);
