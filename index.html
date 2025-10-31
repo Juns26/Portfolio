@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jun Siang | Portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Loh Jun Siang — Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <script src="script.js" defer></script>
 </head>
 <body>
   <header>
     <nav>
-      <h1 class="logo">Jun Siang</h1>
+      <h1 class="logo">Loh Jun Siang</h1>
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -21,60 +21,163 @@
     </nav>
   </header>
 
-  <section id="home" class="hero">
-    <div class="hero-content">
-      <h2>Hi, I’m <span>Jun Siang</span></h2>
-      <p>Aspiring Data Analyst | Python | SQL | E-commerce Analytics</p>
-      <a href="#projects" class="btn">View My Work</a>
-    </div>
-  </section>
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h2>Hi, I’m <span>Jun Siang</span></h2>
+        <p class="subtitle">Aspiring Data / Business Analyst — Python • SQL • Power BI • R • Excel</p>
+        <p class="tagline">Passionate about data-driven decision making, automation, and finance analytics.</p>
+        <p class="tagline">Enjoys bouldering and volunteering with children.</p>
+        <div class="links">
+          <a class="btn" href="#projects">View Projects</a>
+          <!-- <a class="btn ghost" href="Loh_Jun_Siang_Resume.pdf" download>Download Resume</a> -->
+        </div>
+      </div>
+    </section>
 
-  <section id="projects" class="section">
+    <section id="projects" class="section">
     <h2>Projects</h2>
     <div class="project-grid">
-      <div class="project-card">
-        <h3>📊 Trade Tracker Bot</h3>
-        <p>Automated options trade logging system using Telegram and Google Sheets API.</p>
-      </div>
-      <div class="project-card">
-        <h3>🤖 EV Adoption Simulation</h3>
-        <p>Agent-based model simulating electric vehicle adoption behavior in cities.</p>
-      </div>
-      <div class="project-card">
-        <h3>🧠 Safety Choice Model</h3>
-        <p>Keras neural network predicting choice selection based on demographics and bundle features.</p>
-      </div>
-    </div>
-  </section>
 
-  <section id="experience" class="section">
+        <article class="project-card">
+        <div class="card-header">
+            <h3>📈 Options Trading Tracker</h3>
+        </div>
+        <p>
+            Automated trade logging system using Telegram + Google Sheets API + OCR.
+            Hosted on AWS EC2 with Power BI dashboards for live analytics.
+        </p>
+        <div class="card-links">
+            <a href="https://app.powerbi.com/view?r=eyJrIjoiOGQ4NDNlNWQtMTkxNy00ZjI1LThhYWYtYzkwOGM0Y2IwZDkzIiwidCI6IjM0NzZiNzc2LWU5OTAtNGY3Mi1iOTUwLTYyNDg5ODMxNjIzZCIsImMiOjEwfQ%3D%3D"
+            target="_blank" class="btn small">View Dashboard</a>
+        </div>
+        </article>
+
+        <article class="project-card">
+        <div class="card-header">
+            <h3>🚗 EV Adoption Simulation</h3>
+        </div>
+        <p>
+            Agent-based model built in Python to simulate electric vehicle adoption
+            in a city, with civilians purchasing EVs based on computed willingness scores.
+        </p>
+        <div class="card-links">
+            <a href="https://40-015-ev-adoption-simulator.vercel.app/"
+            target="_blank" class="btn small">View Simulation</a>
+        </div>
+        </article>
+
+        <article class="project-card">
+        <div class="card-header">
+            <h3>📊 Project Management Web App</h3>
+        </div>
+        <p>
+            R Shiny-based project scheduling and resource visualization tool implementing
+            CPM, Gantt, and leveling algorithms.
+        </p>
+        <div class="card-links">
+            <a href="https://js26.shinyapps.io/new_app/"
+            target="_blank" class="btn small">View Dashboard</a>
+        </div>
+        </article>
+
+        <article class="project-card">
+        <div class="card-header">
+            <h3>🧪 Research — SUTD Metasurface Optics</h3>
+        </div>
+        <p>
+            Conducted research on stacked C3/C4 metasurfaces to study phase polarization control.
+            Co-authored of research paper.
+        </p>
+        <div class="card-links">
+            <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.134.023804" 
+            target="_blank" 
+            class="btn small">View Publication</a>
+        </div>
+        </article>
+
+
+    </div>
+
+    <p class="portfolio-link">
+        Full portfolio (slides): 
+        <a href="https://sutdapac-my.sharepoint.com/:p:/g/personal/junsiang_loh_mymail_sutd_edu_sg/EdpP7PUhJ-BNszWh3TQN0ekBA8gX8B68orzphNiwa3oC6w?rtime=lFXK6l_z3Ug" 
+        target="_blank" rel="noopener">
+        PowerPoint Portfolio (OneDrive)
+        </a>
+    </p>
+    </section>
+
+
+    <section id="experience" class="section">
     <h2>Experience</h2>
-    <div class="exp-item">
-      <h3>Shopee Singapore — Business Development Intern</h3>
-      <p><em>Jun 2024 – Present</em></p>
-      <ul>
-        <li>Supported 5 Day Delivery project, optimizing seller drop-off points.</li>
-        <li>Automated dataset analysis with Python and Google Sheets API.</li>
-        <li>Monitored listing quality and performance during regional campaigns.</li>
-      </ul>
+
+    <div class="exp-container">
+        <div class="exp-item">
+        <div class="exp-header">
+            <h3>Business Partner Intern — Singapore Exchange</h3>
+            <span class="exp-date">Jun 2025 – Sept 2025</span>
+        </div>
+        <ul>
+            <li>Transformed financial data from Snowflake and SAP into monthly performance dashboards using Power Query.</li>
+            <li>Reconciled revenue and expense data across business units to within 0.5% variance.</li>
+        </ul>
+        </div>
+
+        <div class="exp-item">
+        <div class="exp-header">
+            <h3>Business Development Intern — Shopee (Seller Operations)</h3>
+            <span class="exp-date">Aug 2024 – Dec 2024</span>
+        </div>
+        <ul>
+            <li>Optimized drop-off points for affected sellers using ArcGIS.</li>
+            <li>Automated whitelisting of eligible listings with Python scripts and performed impact analyses for delivery process changes.</li>
+        </ul>
+        </div>
+
+        <div class="exp-item">
+        <div class="exp-header">
+            <h3>Research Assistant — SUTD</h3>
+            <span class="exp-date">May 2023 – Dec 2023</span>
+        </div>
+        <ul>
+            <li>Analyzed metasurfaces with Python visualization tools and co-authored a publication.</li>
+        </ul>
+        </div>
     </div>
-  </section>
+    </section>
 
-  <section id="education" class="section">
+
+    <section id="education" class="section">
     <h2>Education</h2>
-    <p><strong>Nanyang Technological University</strong><br>
-    B.Eng. in Computer Science — Data Analytics Focus</p>
-  </section>
 
-  <section id="contact" class="section">
+    <div class="edu-container">
+        <div class="edu-item">
+        <h3>Singapore University of Technology and Design (SUTD)</h3>
+        <p>B.Eng. — Engineering Systems & Design (Business Analytics & Operations Research), Minor in Computer Science</p>
+        <span class="edu-highlight">SUTD Global Distinguished Scholarship recipient</span>
+        </div>
+    </div>
+    </section>
+
+
+    <section id="contact" class="section">
     <h2>Contact</h2>
-    <p>📧 <a href="mailto:junsiang@example.com">junsiang@example.com</a></p>
-    <p>🔗 <a href="https://www.linkedin.com/in/junsiang" target="_blank">LinkedIn</a></p>
-    <p>💼 <a href="https://github.com/junsiang" target="_blank">GitHub</a></p>
-  </section>
+
+    <div class="contact-container">
+        <div class="contact-item">
+        <p>📧 <a href="mailto:lohjunsiang26@gmail.com">lohjunsiang26@gmail.com</a></p> <br>
+        <p>🔗 <a href="https://www.linkedin.com/in/loh-jun-siang-928a0122b/" target="_blank">LinkedIn</a></p> <br>
+        <p>💼 <a href="https://github.com/Juns26" target="_blank">GitHub</a></p>
+        </div>
+    </div>
+    </section>
+  </main>
 
   <footer>
-    <p>© 2025 Jun Siang. All rights reserved.</p>
+    <p>© 2025 Loh Jun Siang</p>
   </footer>
 </body>
 </html>
+
+
