@@ -104,6 +104,7 @@ nav a:hover { color: #007bff; }
   justify-content: space-between;
   min-height: 230px; /* ensures space for text + buttons */
   position: relative;
+  align-items: center
 }
 
 .project-card:hover {
