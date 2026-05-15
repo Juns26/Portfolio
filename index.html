@@ -1,257 +1,365 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Loh Jun Siang — Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  />
-  <script src="script.js" defer></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Loh Jun Siang — Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <script src="script.js" defer></script>
 </head>
+
 <body>
-  <header>
-    <nav>
-      <h1 class="logo">Loh Jun Siang</h1>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+        <nav>
+            <h1 class="logo">Loh Jun Siang</h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <main>
-    <section id="home" class="hero">
-      <div class="hero-content">
-        <h2>Hi, I’m <span>Jun Siang</span></h2>
-        <p class="subtitle">Aspiring Data / Business Analyst — Python • SQL • Power BI • R • Excel</p>
-        <p class="tagline">Passionate about data-driven decision making, automation, and finance analytics.</p>
-        <p class="tagline">Enjoys bouldering and volunteering with children.</p>
-        <div class="links">
-          <a class="btn" href="#projects">View Projects</a>
-          <!-- <a class="btn ghost" href="Loh_Jun_Siang_Resume.pdf" download>Download Resume</a> -->
-        </div>
-      </div>
-    </section>
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h2>Hi, I’m <span>Jun Siang</span></h2>
+                <p class="subtitle">Aspiring <span class="typing-text">Data / Business Analyst</span><span
+                        class="cursor">|</span></p>
+                <div class="hero-skills">
+                    <span class="skill-pill">Python</span>
+                    <span class="skill-pill">SQL</span>
+                    <span class="skill-pill">Power BI</span>
+                    <span class="skill-pill">R</span>
+                    <span class="skill-pill">Gurobi Optimizer</span>
+                    <span class="skill-pill">Excel</span>
+                </div>
+                <p class="tagline">Passionate about data-driven decision making, automation, and finance analytics.</p>
+                <p class="tagline">Enjoys bouldering and volunteering with children.</p>
+                <div class="links">
+                    <a class="btn" href="#projects">View Projects</a>
+                    <!-- <a class="btn ghost" href="Loh_Jun_Siang_Resume.pdf" download>Download Resume</a> -->
+                </div>
+            </div>
+        </section>
 
-    <section id="projects" class="section">
-    <h2>Projects</h2>
-    <div class="project-grid">
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <div class="project-grid">
 
-        <article class="project-card">
-        <div class="card-header">
-            <h3>
-            <span class="fa-solid fa-plane-departure"></span>
-            Airport Systems Modelling & Simulation
-            </h3>
+                <article class="project-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);">
+                        <i class="fa-solid fa-microphone project-icon-large"></i>
+                    </div>
+                    <div class="project-content">
+                        <div class="card-header">
+                            <h3>Deepfake audio detection - OdioCheck</h3>
+                        </div>
+                        <p>
+                            Created a custom model architecture that integrates features cross attention fusion and
+                            graph
+                            modelling to improve deepfake audio detection.
+                            Outperforms SOTA AASIST model in EER and min-DCF
+                            metrics.
+                        </p>
+                        <div class="card-links">
+                            <a href="https://odio-check.vercel.app/" target="_blank" class="btn small">View Demo</a>
+                        </div>
+                    </div>
+                </article>
 
-        </div>
-        <p>
-            Created a simulation of a single runway airport using CAST and analyzed various operational policy changes in minimizing delays.
-            Recommend operational adjustments to reduce average aircraft delay by over 50% under high demand scenarios.
-        </p>
-        <div class="card-links">
-            <a href="https://www.canva.com/design/DAG6I2HVem4/BIBDr1Bdc2-WTouJChn2pA/edit?utm_content=DAG6I2HVem4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
-            target="_blank" class="btn small">View Presentation</a>
-        </div>
-        </article>
+                <article class="project-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);">
+                        <i class="fa-solid fa-plane-departure project-icon-large"></i>
+                    </div>
+                    <div class="project-content">
+                        <div class="card-header">
+                            <h3>Airport Systems Modelling & Simulation</h3>
+                        </div>
+                        <p>
+                            Created a simulation of a single runway airport using CAST and analyzed various operational
+                            policy changes in minimizing delays.
+                            Recommend operational adjustments to reduce average aircraft delay by over 50% under high
+                            demand
+                            scenarios.
+                        </p>
+                        <div class="card-links">
+                            <a href="https://www.canva.com/design/DAG6I2HVem4/BIBDr1Bdc2-WTouJChn2pA/edit?utm_content=DAG6I2HVem4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+                                target="_blank" class="btn small">View Presentation</a>
+                        </div>
+                    </div>
+                </article>
 
-        <article class="project-card">
-        <div class="card-header">
-            <h3>
-            <span class="fa-solid fa-chart-area"></span>
-            Options Trading Tracker
-            </h3>
+                <article class="project-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, #fccb90 0%, #d57eeb 100%);">
+                        <i class="fa-solid fa-chart-area project-icon-large"></i>
+                    </div>
+                    <div class="project-content">
+                        <div class="card-header">
+                            <h3>Options Trading Tracker</h3>
+                        </div>
+                        <p>
+                            Automated trade logging system using Telegram + Google Sheets API + OCR.
+                            Hosted on AWS EC2 with Power BI dashboards for live analytics.
+                        </p>
+                        <div class="card-links">
+                            <a href="https://docs.google.com/spreadsheets/d/1v4rEDaMMTmYBpNkWk9w9vGfgIOXImbeTGoaEH5ZlcbM/edit?gid=607931487#gid=607931487"
+                                target="_blank" class="btn small">View Dashboard</a>
+                        </div>
+                    </div>
+                </article>
 
-        </div>
-        <p>
-            Automated trade logging system using Telegram + Google Sheets API + OCR.
-            Hosted on AWS EC2 with Power BI dashboards for live analytics.
-        </p>
-        <div class="card-links">
-            <a href="https://docs.google.com/spreadsheets/d/1v4rEDaMMTmYBpNkWk9w9vGfgIOXImbeTGoaEH5ZlcbM/edit?gid=607931487#gid=607931487"
-            target="_blank" class="btn small">View Dashboard</a>
-        </div>
-        </article>
+                <article class="project-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);">
+                        <i class="fa-solid fa-car-battery project-icon-large"></i>
+                    </div>
+                    <div class="project-content">
+                        <div class="card-header">
+                            <h3>EV Adoption Simulation</h3>
+                        </div>
+                        <p>
+                            Agent-based model built in Python to simulate electric vehicle adoption
+                            in a city, with civilians purchasing EVs based on computed willingness scores.
+                        </p>
+                        <div class="card-links">
+                            <a href="https://40-015-ev-adoption-simulator.vercel.app/" target="_blank"
+                                class="btn small">View Simulation</a>
+                        </div>
+                    </div>
+                </article>
 
-        <article class="project-card">
-        <div class="card-header">
-            <h3>
-            <span class="fa-solid fa-car-battery"></span>
-            EV Adoption Simulation
-            </h3>
+                <article class="project-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fa-solid fa-diagram-project project-icon-large"></i>
+                    </div>
+                    <div class="project-content">
+                        <div class="card-header">
+                            <h3>Project Management Web App</h3>
+                        </div>
+                        <p>
+                            R Shiny-based project scheduling and resource visualization tool implementing
+                            CPM, Gantt, and leveling algorithms.
+                        </p>
+                        <div class="card-links">
+                            <a href="https://js26.shinyapps.io/new_app/" target="_blank" class="btn small">View
+                                Dashboard</a>
+                        </div>
+                    </div>
+                </article>
 
-        </div>
-        <p>
-            Agent-based model built in Python to simulate electric vehicle adoption
-            in a city, with civilians purchasing EVs based on computed willingness scores.
-        </p>
-        <div class="card-links">
-            <a href="https://40-015-ev-adoption-simulator.vercel.app/"
-            target="_blank" class="btn small">View Simulation</a>
-        </div>
-        </article>
+                <article class="project-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, #ff0844 0%, #ffb199 100%);">
+                        <i class="fa-solid fa-chart-line project-icon-large"></i>
+                    </div>
+                    <div class="project-content">
+                        <div class="card-header">
+                            <h3>Data & Business Analytics</h3>
+                        </div>
+                        <p>
+                            Analyzed youth usage patterns of the H365 application and proposed
+                            data-driven product and UX improvements.
+                        </p>
+                        <div class="card-links">
+                            <a href="assets/data-business-analytics-poster.pdf" target="_blank" class="btn small">
+                                View Poster (PDF)
+                            </a>
+                        </div>
+                    </div>
+                </article>
 
-        <article class="project-card">
-        <div class="card-header">
-            <h3>
-            <span class="fa-solid fa-diagram-project"></span>
-            Project Management Web App
-            </h3>
-        </div>
-        <p>
-            R Shiny-based project scheduling and resource visualization tool implementing
-            CPM, Gantt, and leveling algorithms.
-        </p>
-        <div class="card-links">
-            <a href="https://js26.shinyapps.io/new_app/"
-            target="_blank" class="btn small">View Dashboard</a>
-        </div>
-        </article>
-
-        <article class="project-card">
-        <div class="card-header">
-            <h3>
-            <span class="fa-solid fa-chart-line"></span>
-            Data & Business Analytics
-            </h3>
-        </div>
-        <p>
-        Analyzed youth usage patterns of the H365 application and proposed
-        data-driven product and UX improvements.
-        </p>
-        <div class="card-links">
-            <a href="assets/data-business-analytics-poster.pdf"
-            target="_blank"
-            class="btn small">
-            View Poster (PDF)
-            </a>
-        </div>
-        </article>
-
-
-        <article class="project-card">
-        <div class="card-header">
-            <h3>
-            <span class="fa-solid fa-flask"></span>
-            Research — SUTD Metasurface Optics
-            </h3>
-        </div>
-        <p>
-            Conducted research on stacked C3/C4 metasurfaces to study phase polarization control.
-            Co-authored of research paper.
-        </p>
-        <div class="card-links">
-            <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.134.023804" 
-            target="_blank" 
-            class="btn small">View Publication</a>
-        </div>
-        </article>
-
-
-    </div>
-    </section>
-
-
-    <section id="experience" class="section">
-    <h2>Experience</h2>
-
-    <div class="exp-container">
-
-        <div class="exp-item">
-        <div class="exp-header">
-            <h3>UIUX & Data Engineer Intern — Singapore Medical Group </h3>
-            <span class="exp-date">Sept 2025 – Dec 2025</span>
-        </div>
-        <ul>
-            <li>Identified and proposed bug fixes and usability improvements for a newly developed dashboard. </li>
-            <li>Validated and corrected patient metrics using MySQL, improving data accuracy across over 30 clinics </li>
-        </ul>
-        </div>
-
-        <div class="exp-item">
-        <div class="exp-header">
-            <h3>Business Partner Intern — Singapore Exchange</h3>
-            <span class="exp-date">Jun 2025 – Sept 2025</span>
-        </div>
-        <ul>
-            <li>Transformed financial data from Snowflake and SAP into monthly performance dashboards using Power Query.</li>
-            <li>Reconciled revenue and expense data across business units to within 0.5% variance.</li>
-        </ul>
-        </div>
-
-        <div class="exp-item">
-        <div class="exp-header">
-            <h3>Business Development Intern — Shopee (Seller Operations)</h3>
-            <span class="exp-date">Aug 2024 – Dec 2024</span>
-        </div>
-        <ul>
-            <li>Optimized drop-off points for affected sellers using ArcGIS.</li>
-            <li>Automated whitelisting of eligible listings with Python scripts and performed impact analyses for delivery process changes.</li>
-        </ul>
-        </div>
-
-        <div class="exp-item">
-        <div class="exp-header">
-            <h3>Research Assistant — SUTD</h3>
-            <span class="exp-date">May 2023 – Dec 2023</span>
-        </div>
-        <ul>
-            <li>Analyzed metasurfaces with Python visualization tools and co-authored a publication.</li>
-        </ul>
-        </div>
-    </div>
-    </section>
+                <article class="project-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                        <i class="fa-solid fa-flask project-icon-large"></i>
+                    </div>
+                    <div class="project-content">
+                        <div class="card-header">
+                            <h3>Research — SUTD Metasurface Optics</h3>
+                        </div>
+                        <p>
+                            Conducted research on stacked C3/C4 metasurfaces to study phase polarization control.
+                            Co-authored of research paper.
+                        </p>
+                        <div class="card-links">
+                            <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.134.023804"
+                                target="_blank" class="btn small">View Publication</a>
+                        </div>
+                    </div>
+                </article>
 
 
-    <section id="education" class="section">
-    <h2>Education</h2>
-
-    <div class="edu-container">
-        <div class="edu-item">
-        <h3>Singapore University of Technology and Design (SUTD)</h3>
-        <p>B.Eng. — Engineering Systems & Design (Business Analytics & Operations Research), Minor in Computer Science</p>
-        <div style="display: flex; flex-direction: column; gap: 0.75rem; align-items: center;">
-            <span class="edu-highlight">SUTD Global Distinguished Scholarship recipient</span>
-            <span class="edu-highlight">SUTD Honours List - Freshmore</span>
-            <span class="edu-highlight">SUTD Honours List - Sophomore & Junior</span>
-        </div>
-        </div>
-    </div>
-    </section>
+            </div>
+        </section>
 
 
-    <section id="contact" class="section">
-    <h2>Contact</h2>
+        <section id="experience" class="section">
+            <h2>Experience</h2>
 
-    <div class="contact-container">
-        <div class="contact-item">
-            <a href="mailto:lohjunsiang26@gmail.com" class="social-link">
-                <i class="fa-solid fa-envelope"></i>
-                <span>Email</span>
-            </a>
-            <a href="https://www.linkedin.com/in/loh-jun-siang-928a0122b/" target="_blank" class="social-link">
-                <i class="fa-brands fa-linkedin"></i>
-                <span>LinkedIn</span>
-            </a>
-            <a href="https://github.com/Juns26" target="_blank" class="social-link">
-                <i class="fa-brands fa-github"></i>
-                <span>GitHub</span>
-            </a>
-        </div>
-    </div>
-    </section>
-  </main>
+            <div class="exp-container">
+
+                <div class="exp-item">
+                    <div class="exp-icon-wrapper">
+                        <i class="fa-solid fa-hospital-user"></i>
+                    </div>
+                    <div class="exp-content">
+                        <div class="exp-header">
+                            <h3>UIUX & Data Engineer Intern — Singapore Medical Group </h3>
+                            <span class="exp-date">Sept 2025 – Dec 2025</span>
+                        </div>
+                        <ul>
+                            <li>Identified and proposed bug fixes and usability improvements for a newly developed
+                                dashboard. </li>
+                            <li>Validated and corrected patient metrics using MySQL, improving data accuracy across over
+                                30
+                                clinics </li>
+                        </ul>
+                        <div class="exp-skills">
+                            <span class="skill-pill">MySQL</span>
+                            <span class="skill-pill">Project Management</span>
+                            <span class="skill-pill">Data Reconciliation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exp-item">
+                    <div class="exp-icon-wrapper">
+                        <i class="fa-solid fa-money-bill-trend-up"></i>
+                    </div>
+                    <div class="exp-content">
+                        <div class="exp-header">
+                            <h3>Business Partner Intern — Singapore Exchange</h3>
+                            <span class="exp-date">Jun 2025 – Sept 2025</span>
+                        </div>
+                        <ul>
+                            <li>Transformed financial data from Snowflake and SAP into monthly performance dashboards
+                                using
+                                Power Query.</li>
+                            <li>Reconciled revenue and expense data across business units to within 0.5% variance.</li>
+                        </ul>
+                        <div class="exp-skills">
+                            <span class="skill-pill">Power Query</span>
+                            <span class="skill-pill">Snowflake</span>
+                            <span class="skill-pill">SAP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exp-item">
+                    <div class="exp-icon-wrapper">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                    <div class="exp-content">
+                        <div class="exp-header">
+                            <h3>Business Development Intern — Shopee (Seller Operations)</h3>
+                            <span class="exp-date">Aug 2024 – Dec 2024</span>
+                        </div>
+                        <ul>
+                            <li>Optimized drop-off points for affected sellers using ArcGIS.</li>
+                            <li>Automated whitelisting of eligible listings with Python scripts and performed impact
+                                analyses for delivery process changes.</li>
+                        </ul>
+                        <div class="exp-skills">
+                            <span class="skill-pill">Python</span>
+                            <span class="skill-pill">ArcGIS</span>
+                            <span class="skill-pill">Data Analysis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exp-item">
+                    <div class="exp-icon-wrapper">
+                        <i class="fa-solid fa-microscope"></i>
+                    </div>
+                    <div class="exp-content">
+                        <div class="exp-header">
+                            <h3>Research Assistant — SUTD</h3>
+                            <span class="exp-date">May 2023 – Dec 2023</span>
+                        </div>
+                        <ul>
+                            <li>Analyzed metasurfaces with Python visualization tools and co-authored a publication.
+                            </li>
+                        </ul>
+                        <div class="exp-skills">
+                            <span class="skill-pill">Python</span>
+                            <span class="skill-pill">Data Visualization</span>
+                            <span class="skill-pill">Research</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="education" class="section">
+            <h2>Education</h2>
+
+            <div class="edu-container">
+                <div class="edu-card">
+                    <div class="edu-header">
+                        <div class="edu-icon">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <div class="edu-title-wrapper">
+                            <h3>Singapore University of Technology and Design (SUTD)</h3>
+                            <h4 class="edu-degree">Bachelor of Engineering (Engineering Systems & Design)</h4>
+                            <p class="edu-honours">Honours (Highest Distinction)</p>
+                        </div>
+                    </div>
+
+                    <div class="edu-badges">
+                        <span class="badge spec-badge">Specialization in Business Analytics & Operations Research</span>
+                        <span class="badge minor-badge">Minor in Computer Science</span>
+                    </div>
+
+                    <div class="edu-achievements">
+                        <div class="achievement-item">
+                            <i class="fa-solid fa-award"></i>
+                            <span>SUTD Global Distinguished Scholarship recipient</span>
+                        </div>
+                        <div class="achievement-item">
+                            <i class="fa-solid fa-medal"></i>
+                            <span>SUTD Honours List - Freshmore</span>
+                        </div>
+                        <div class="achievement-item">
+                            <i class="fa-solid fa-medal"></i>
+                            <span>SUTD Honours List - Sophomore & Junior</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+
+            <div class="contact-container">
+                <div class="contact-item">
+                    <a href="mailto:lohjunsiang26@gmail.com" class="social-link">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>Email</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/loh-jun-siang-928a0122b/" target="_blank" class="social-link">
+                        <i class="fa-brands fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/Juns26" target="_blank" class="social-link">
+                        <i class="fa-brands fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer>
-    <p>© <script>document.write(new Date().getFullYear())</script> Loh Jun Siang</p>
+        <p>©
+            <script>document.write(new Date().getFullYear())</script> Loh Jun Siang
+        </p>
     </footer>
 </body>
+
 </html>
-
-
