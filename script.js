@@ -1,31 +1,27 @@
-// Smooth scroll highlight & Navbar shrink
-document.addEventListener('scroll', () => {
-  const sections = document.querySelectorAll('section');
-  const scrollPos = window.scrollY + 200;
+// Smooth Navbar shrink & typing animation
 
-  // Navbar shrink
+document.addEventListener('scroll', () => {
   const header = document.querySelector('header');
-  if (window.scrollY > 50) {
-    header.classList.add('scrolled');
-  } else {
-    header.classList.remove('scrolled');
+  if (header) {
+    if (window.scrollY > 40) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
   }
 
-  sections.forEach(sec => {
-    const id = sec.getAttribute('id');
-    const link = document.querySelector(`nav a[href="#${id}"]`);
-    if (link) {
-      if (scrollPos > sec.offsetTop && scrollPos < sec.offsetTop + sec.offsetHeight) {
-        link.classList.add('active');
-      } else {
-        link.classList.remove('active');
-      }
+  const backToTop = document.getElementById('back-to-top');
+  if (backToTop) {
+    if (window.scrollY > 280) {
+      backToTop.classList.add('visible');
+    } else {
+      backToTop.classList.remove('visible');
     }
-  });
+  }
 });
 
 // Typing Animation
-const texts = ["Data Analyst", "Business Intelligence Analyst"];
+const texts = ["Data Analyst", "Business Intelligence Analyst", "Operations Researcher"];
 let count = 0;
 let index = 0;
 let currentText = "";
@@ -49,16 +45,16 @@ let isDeleting = false;
     typingElement.textContent = letter;
   }
 
-  let typeSpeed = isDeleting ? 50 : 100;
+  let typeSpeed = isDeleting ? 45 : 95;
 
   if (!isDeleting && letter.length === currentText.length) {
-    typeSpeed = 2000; // Pause at end
+    typeSpeed = 2200; // Pause at end
     isDeleting = true;
   } else if (isDeleting && letter.length === 0) {
     isDeleting = false;
     count++;
-    typeSpeed = 500; // Pause before new word
+    typeSpeed = 400; // Pause before new word
   }
 
   setTimeout(type, typeSpeed);
-}());
+})();

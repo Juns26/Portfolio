@@ -4,16 +4,29 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Loh Jun Siang — Portfolio</title>
+    <meta name="theme-color" content="#09090f" />
+    <meta name="description" content="Portfolio of Loh Jun Siang — Aspiring Data & Business Analyst with expertise in Python, SQL, LLM, LangChain, Power BI and more." />
+    <title>Loh Jun Siang — 3D Workstation Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!-- 3D & Animation Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="script.js" defer></script>
+    <script src="three-scene.js" defer></script>
 </head>
 
 <body>
-    <header>
+    <!-- 3D Interactive Workstation Canvas -->
+    <canvas id="webgl-canvas"></canvas>
+
+    <header id="main-header">
         <nav>
-            <h1 class="logo">Loh Jun Siang</h1>
+            <a href="#intro" class="logo">
+                <span>Loh Jun Siang</span>
+                <span class="logo-badge">Workstation</span>
+            </a>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -25,11 +38,30 @@
     </header>
 
     <main>
-        <section id="home" class="hero">
-            <div class="hero-content">
+        <!-- SCENE 0: INTRO ESTABLISHING VIEW -->
+        <section id="intro" class="scene-section intro-section in-view">
+            <div class="intro-prompt interactive-object">
+                <span class="intro-badge"><i class="fa-solid fa-cube"></i> Interactive Workstation</span>
+                <h2>Loh Jun Siang</h2>
+                <p>Scroll down to zoom into workstation objects &amp; explore sections</p>
+                <a href="#home" class="scroll-indicator">
+                    <span>Explore Desk</span>
+                    <i class="fa-solid fa-chevron-down bounce"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- SCENE 1: HOME (WITHIN THE 3D NAME CARD) -->
+        <section id="home" class="scene-section home-section">
+            <div class="object-namecard interactive-object">
+                <div class="namecard-header">
+                    <div class="namecard-monogram">JS</div>
+                    <span class="namecard-object-label"><i class="fa-solid fa-id-card"></i> Name Card • Workstation Desk</span>
+                </div>
+
                 <h2>Hi, I’m <span>Jun Siang</span></h2>
-                <p class="subtitle">Aspiring <span class="typing-text">Data / Business Analyst</span><span
-                        class="cursor">|</span></p>
+                <p class="subtitle">Aspiring <span class="typing-text">Data / Business Analyst</span><span class="cursor">|</span></p>
+
                 <div class="hero-skills">
                     <span class="skill-pill">Python</span>
                     <span class="skill-pill">SQL</span>
@@ -42,348 +74,365 @@
                     <span class="skill-pill">LangChain</span>
                     <span class="skill-pill">LangGraph</span>
                 </div>
+
                 <p class="tagline">Passionate about data-driven decision making, automation, and finance analytics.</p>
                 <p class="tagline">Enjoys bouldering and volunteering with children.</p>
+
                 <div class="links">
-                    <a class="btn" href="#projects">View Projects</a>
-                    <!-- <a class="btn ghost" href="Loh_Jun_Siang_Resume.pdf" download>Download Resume</a> -->
+                    <a class="btn" href="#projects"><i class="fa-solid fa-folder-open"></i> View Projects</a>
+                    <a class="btn ghost" href="#contact"><i class="fa-solid fa-paper-plane"></i> Contact Me</a>
                 </div>
             </div>
         </section>
 
-        <section id="projects" class="section">
-            <h2>Projects</h2>
-            <div class="project-grid">
-
-                <article class="project-card">
-                    <div class="project-image" style="background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);">
-                        <i class="fa-solid fa-microphone project-icon-large"></i>
-                    </div>
-                    <div class="project-content">
-                        <div class="card-header">
-                            <h3>Deepfake audio detection - OdioCheck</h3>
-                        </div>
-                        <p>
-                            Created a custom model architecture that integrates features cross attention fusion and
-                            graph
-                            modelling to improve deepfake audio detection.
-                            Outperforms SOTA AASIST model in EER and min-DCF
-                            metrics.
-                        </p>
-                        <div class="card-links">
-                            <a href="https://odio-check.vercel.app/" target="_blank" class="btn small">View Demo</a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-image" style="background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);">
-                        <i class="fa-solid fa-plane-departure project-icon-large"></i>
-                    </div>
-                    <div class="project-content">
-                        <div class="card-header">
-                            <h3>Airport Systems Modelling & Simulation</h3>
-                        </div>
-                        <p>
-                            Created a simulation of a single runway airport using CAST and analyzed various operational
-                            policy changes in minimizing delays.
-                            Recommend operational adjustments to reduce average aircraft delay by over 50% under high
-                            demand
-                            scenarios.
-                        </p>
-                        <div class="card-links">
-                            <a href="https://www.canva.com/design/DAG6I2HVem4/BIBDr1Bdc2-WTouJChn2pA/edit?utm_content=DAG6I2HVem4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
-                                target="_blank" class="btn small">View Presentation</a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-image" style="background: linear-gradient(135deg, #fccb90 0%, #d57eeb 100%);">
-                        <i class="fa-solid fa-chart-area project-icon-large"></i>
-                    </div>
-                    <div class="project-content">
-                        <div class="card-header">
-                            <h3>ThetaPilot — Agentic Options Portfolio Analyst</h3>
-                        </div>
-                        <p>
-                            Agentic Telegram bot that syncs Tiger Brokers trades to Google Sheets, classifies
-                            options strategies, and answers natural-language P&amp;L questions with charts.
-                            Built with a LangGraph plan-and-execute workflow and LangChain tool wrappers.
-                        </p>
-                        <div class="card-links">
-                            <a href="https://github.com/Juns26/Options-bot" target="_blank" class="btn small">View on GitHub</a>
-                            <a href="https://docs.google.com/spreadsheets/d/1v4rEDaMMTmYBpNkWk9w9vGfgIOXImbeTGoaEH5ZlcbM/edit?gid=607931487#gid=607931487"
-                                target="_blank" class="btn small">View Dashboard</a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-image" style="background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);">
-                        <i class="fa-solid fa-car-battery project-icon-large"></i>
-                    </div>
-                    <div class="project-content">
-                        <div class="card-header">
-                            <h3>EV Adoption Simulation</h3>
-                        </div>
-                        <p>
-                            Agent-based model built in Python to simulate electric vehicle adoption
-                            in a city, with civilians purchasing EVs based on computed willingness scores.
-                        </p>
-                        <div class="card-links">
-                            <a href="https://40-015-ev-adoption-simulator.vercel.app/" target="_blank"
-                                class="btn small">View Simulation</a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
-                        <i class="fa-solid fa-diagram-project project-icon-large"></i>
-                    </div>
-                    <div class="project-content">
-                        <div class="card-header">
-                            <h3>Project Management Web App</h3>
-                        </div>
-                        <p>
-                            R Shiny-based project scheduling and resource visualization tool implementing
-                            CPM, Gantt, and leveling algorithms.
-                        </p>
-                        <div class="card-links">
-                            <a href="https://js26.shinyapps.io/new_app/" target="_blank" class="btn small">View
-                                Dashboard</a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-image" style="background: linear-gradient(135deg, #ff0844 0%, #ffb199 100%);">
-                        <i class="fa-solid fa-chart-line project-icon-large"></i>
-                    </div>
-                    <div class="project-content">
-                        <div class="card-header">
-                            <h3>Data & Business Analytics</h3>
-                        </div>
-                        <p>
-                            Analyzed youth usage patterns of the H365 application and proposed
-                            data-driven product and UX improvements.
-                        </p>
-                        <div class="card-links">
-                            <a href="assets/data-business-analytics-poster.pdf" target="_blank" class="btn small">
-                                View Poster (PDF)
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-image" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
-                        <i class="fa-solid fa-flask project-icon-large"></i>
-                    </div>
-                    <div class="project-content">
-                        <div class="card-header">
-                            <h3>Research — SUTD Metasurface Optics</h3>
-                        </div>
-                        <p>
-                            Conducted research on stacked C3/C4 metasurfaces to study phase polarization control.
-                            Co-authored of research paper.
-                        </p>
-                        <div class="card-links">
-                            <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.134.023804"
-                                target="_blank" class="btn small">View Publication</a>
-                        </div>
-                    </div>
-                </article>
-
-
-            </div>
-        </section>
-
-
-        <section id="experience" class="section">
-            <h2>Experience</h2>
-
-            <div class="exp-container">
-
-                <div class="exp-item">
-                    <div class="exp-icon-wrapper">
-                        <i class="fa-solid fa-robot"></i>
-                    </div>
-                    <div class="exp-content">
-                        <div class="exp-header">
-                            <h3>Technology Development Programme (Contact Centre) — UOB</h3>
-                            <span class="exp-date">2026 – Present</span>
-                        </div>
-                        <!-- <ul>
-                            <li>Identified and proposed bug fixes and usability improvements for a newly developed
-                                dashboard. </li>
-                            <li>Validated and corrected patient metrics using MySQL, improving data accuracy across over
-                                30
-                                clinics </li>
-                        </ul> -->
-                    </div>
+        <!-- SCENE 2: PROJECTS (WITHIN THE CORK PINBOARD) -->
+        <section id="projects" class="scene-section projects-section">
+            <div class="object-corkboard interactive-object">
+                <div class="corkboard-banner">
+                    <h2><i class="fa-solid fa-thumbtack" style="color: #ef4444;"></i> Cork Board Showcase</h2>
+                    <p>Projects pinned across deep learning, operational simulation, AI agents, and optics.</p>
                 </div>
 
-                <div class="exp-item">
-                    <div class="exp-icon-wrapper">
-                        <i class="fa-solid fa-hospital-user"></i>
-                    </div>
-                    <div class="exp-content">
-                        <div class="exp-header">
-                            <h3>UIUX & Data Engineer Intern — Singapore Medical Group </h3>
-                            <span class="exp-date">Sept 2025 – Dec 2025</span>
+                <div class="project-grid">
+                    <!-- Project 1 -->
+                    <article class="project-card">
+                        <div class="pin-badge"></div>
+                        <div class="project-image" style="background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);">
+                            <i class="fa-solid fa-microphone project-icon-large"></i>
                         </div>
-                        <ul>
-                            <li>Identified and proposed bug fixes and usability improvements for a newly developed
-                                dashboard. </li>
-                            <li>Validated and corrected patient metrics using MySQL, improving data accuracy across over
-                                30
-                                clinics </li>
-                        </ul>
-                        <div class="exp-skills">
-                            <span class="skill-pill">MySQL</span>
-                            <span class="skill-pill">Project Management</span>
-                            <span class="skill-pill">Data Reconciliation</span>
+                        <div class="project-content">
+                            <div class="card-header">
+                                <h3>Deepfake audio detection - OdioCheck</h3>
+                            </div>
+                            <p>
+                                Created a custom model architecture integrating feature cross-attention fusion and graph modelling to improve deepfake audio detection. Outperforms SOTA AASIST model in EER and min-DCF metrics.
+                            </p>
+                            <div class="card-links">
+                                <a href="https://odio-check.vercel.app/" target="_blank" class="btn small"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Demo</a>
+                            </div>
                         </div>
-                    </div>
-                </div>
+                    </article>
 
-                <div class="exp-item">
-                    <div class="exp-icon-wrapper">
-                        <i class="fa-solid fa-money-bill-trend-up"></i>
-                    </div>
-                    <div class="exp-content">
-                        <div class="exp-header">
-                            <h3>Business Partner Intern — Singapore Exchange</h3>
-                            <span class="exp-date">Jun 2025 – Sept 2025</span>
+                    <!-- Project 2 -->
+                    <article class="project-card">
+                        <div class="pin-badge"></div>
+                        <div class="project-image" style="background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);">
+                            <i class="fa-solid fa-plane-departure project-icon-large"></i>
                         </div>
-                        <ul>
-                            <li>Transformed financial data from Snowflake and SAP into monthly performance dashboards
-                                using
-                                Power Query.</li>
-                            <li>Reconciled revenue and expense data across business units to within 0.5% variance.</li>
-                        </ul>
-                        <div class="exp-skills">
-                            <span class="skill-pill">Power Query</span>
-                            <span class="skill-pill">Snowflake</span>
-                            <span class="skill-pill">SAP</span>
+                        <div class="project-content">
+                            <div class="card-header">
+                                <h3>Airport Systems Modelling &amp; Simulation</h3>
+                            </div>
+                            <p>
+                                Created a simulation of a single runway airport using CAST and analyzed operational policy changes in minimizing delays. Recommended adjustments to reduce average aircraft delay by over 50% under high demand.
+                            </p>
+                            <div class="card-links">
+                                <a href="https://www.canva.com/design/DAG6I2HVem4/BIBDr1Bdc2-WTouJChn2pA/edit?utm_content=DAG6I2HVem4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="btn small"><i class="fa-solid fa-display"></i> View Presentation</a>
+                            </div>
                         </div>
-                    </div>
-                </div>
+                    </article>
 
-                <div class="exp-item">
-                    <div class="exp-icon-wrapper">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                    </div>
-                    <div class="exp-content">
-                        <div class="exp-header">
-                            <h3>Business Development Intern — Shopee (Seller Operations)</h3>
-                            <span class="exp-date">Aug 2024 – Dec 2024</span>
+                    <!-- Project 3 -->
+                    <article class="project-card">
+                        <div class="pin-badge"></div>
+                        <div class="project-image" style="background: linear-gradient(135deg, #fccb90 0%, #d57eeb 100%);">
+                            <i class="fa-solid fa-chart-area project-icon-large"></i>
                         </div>
-                        <ul>
-                            <li>Optimized drop-off points for affected sellers using ArcGIS.</li>
-                            <li>Automated whitelisting of eligible listings with Python scripts and performed impact
-                                analyses for delivery process changes.</li>
-                        </ul>
-                        <div class="exp-skills">
-                            <span class="skill-pill">Python</span>
-                            <span class="skill-pill">ArcGIS</span>
-                            <span class="skill-pill">Data Analysis</span>
+                        <div class="project-content">
+                            <div class="card-header">
+                                <h3>ThetaPilot — Agentic Options Portfolio Analyst</h3>
+                            </div>
+                            <p>
+                                Agentic Telegram bot that syncs Tiger Brokers trades to Google Sheets, classifies options strategies, and answers natural-language P&amp;L questions with charts using LangGraph and LangChain.
+                            </p>
+                            <div class="card-links">
+                                <a href="https://github.com/Juns26/Options-bot" target="_blank" class="btn small"><i class="fa-brands fa-github"></i> GitHub</a>
+                                <a href="https://docs.google.com/spreadsheets/d/1v4rEDaMMTmYBpNkWk9w9vGfgIOXImbeTGoaEH5ZlcbM/edit?gid=607931487#gid=607931487" target="_blank" class="btn small ghost"><i class="fa-solid fa-table"></i> Dashboard</a>
+                            </div>
                         </div>
-                    </div>
-                </div>
+                    </article>
 
-                <div class="exp-item">
-                    <div class="exp-icon-wrapper">
-                        <i class="fa-solid fa-microscope"></i>
-                    </div>
-                    <div class="exp-content">
-                        <div class="exp-header">
-                            <h3>Research Assistant — SUTD</h3>
-                            <span class="exp-date">May 2023 – Dec 2023</span>
+                    <!-- Project 4 -->
+                    <article class="project-card">
+                        <div class="pin-badge"></div>
+                        <div class="project-image" style="background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);">
+                            <i class="fa-solid fa-car-battery project-icon-large"></i>
                         </div>
-                        <ul>
-                            <li>Analyzed metasurfaces with Python visualization tools and co-authored a publication.
-                            </li>
-                        </ul>
-                        <div class="exp-skills">
-                            <span class="skill-pill">Python</span>
-                            <span class="skill-pill">Data Visualization</span>
-                            <span class="skill-pill">Research</span>
+                        <div class="project-content">
+                            <div class="card-header">
+                                <h3>EV Adoption Simulation</h3>
+                            </div>
+                            <p>
+                                Agent-based model built in Python to simulate electric vehicle adoption dynamics in a city, with civilians purchasing EVs based on computed willingness scores.
+                            </p>
+                            <div class="card-links">
+                                <a href="https://40-015-ev-adoption-simulator.vercel.app/" target="_blank" class="btn small"><i class="fa-solid fa-play"></i> View Simulation</a>
+                            </div>
                         </div>
-                    </div>
+                    </article>
+
+                    <!-- Project 5 -->
+                    <article class="project-card">
+                        <div class="pin-badge"></div>
+                        <div class="project-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                            <i class="fa-solid fa-diagram-project project-icon-large"></i>
+                        </div>
+                        <div class="project-content">
+                            <div class="card-header">
+                                <h3>Project Management Web App</h3>
+                            </div>
+                            <p>
+                                R Shiny-based project scheduling and resource visualization tool implementing Critical Path Method (CPM), interactive Gantt charts, and resource leveling algorithms.
+                            </p>
+                            <div class="card-links">
+                                <a href="https://js26.shinyapps.io/new_app/" target="_blank" class="btn small"><i class="fa-solid fa-chart-gantt"></i> View App</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 6 -->
+                    <article class="project-card">
+                        <div class="pin-badge"></div>
+                        <div class="project-image" style="background: linear-gradient(135deg, #ff0844 0%, #ffb199 100%);">
+                            <i class="fa-solid fa-chart-line project-icon-large"></i>
+                        </div>
+                        <div class="project-content">
+                            <div class="card-header">
+                                <h3>Data &amp; Business Analytics</h3>
+                            </div>
+                            <p>
+                                Analyzed youth usage patterns of the Health365 application and proposed data-driven product recommendations and UX improvements to boost engagement.
+                            </p>
+                            <div class="card-links">
+                                <a href="assets/data-business-analytics-poster.pdf" target="_blank" class="btn small"><i class="fa-solid fa-file-pdf"></i> View Poster (PDF)</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 7 -->
+                    <article class="project-card">
+                        <div class="pin-badge"></div>
+                        <div class="project-image" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                            <i class="fa-solid fa-flask project-icon-large"></i>
+                        </div>
+                        <div class="project-content">
+                            <div class="card-header">
+                                <h3>Research — SUTD Metasurface Optics</h3>
+                            </div>
+                            <p>
+                                Conducted research on stacked C3/C4 metasurfaces to study phase polarization control. Co-authored publication in Physical Review Letters (PRL).
+                            </p>
+                            <div class="card-links">
+                                <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.134.023804" target="_blank" class="btn small"><i class="fa-solid fa-book-open"></i> View Publication</a>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
 
+        <!-- SCENE 3: EXPERIENCE (WITHIN THE PRINTED RESUME PAPER) -->
+        <section id="experience" class="scene-section exp-section">
+            <div class="object-resume interactive-object">
+                <div class="resume-header">
+                    <div>
+                        <h2>Loh Jun Siang</h2>
+                        <p>Curriculum Vitae &amp; Professional Experience</p>
+                    </div>
+                </div>
 
-        <section id="education" class="section">
-            <h2>Education</h2>
-
-            <div class="edu-container">
-                <div class="edu-card">
-                    <div class="edu-header">
-                        <div class="edu-icon">
-                            <i class="fa-solid fa-graduation-cap"></i>
+                <div class="exp-container">
+                    <!-- Exp 1 -->
+                    <div class="exp-item">
+                        <div class="exp-icon-wrapper">
+                            <i class="fa-solid fa-robot"></i>
                         </div>
-                        <div class="edu-title-wrapper">
-                            <h3>Singapore University of Technology and Design (SUTD)</h3>
-                            <h4 class="edu-degree">Bachelor of Engineering (Engineering Systems & Design)</h4>
-                            <p class="edu-honours">Honours (Highest Distinction)</p>
+                        <div class="exp-content">
+                            <div class="exp-header">
+                                <h3>Technology Development Programme (Contact Centre) — UOB</h3>
+                                <span class="exp-date">2026 – Present</span>
+                            </div>
+                            <p style="color: #475569; font-size: 0.88rem; line-height: 1.6;">
+                                Contact Centre technology enhancement, operations analytics, and banking systems automation.
+                            </p>
                         </div>
                     </div>
+
+                    <!-- Exp 2 -->
+                    <div class="exp-item">
+                        <div class="exp-icon-wrapper">
+                            <i class="fa-solid fa-hospital-user"></i>
+                        </div>
+                        <div class="exp-content">
+                            <div class="exp-header">
+                                <h3>UIUX &amp; Data Engineer Intern — Singapore Medical Group</h3>
+                                <span class="exp-date">Sept 2025 – Dec 2025</span>
+                            </div>
+                            <ul>
+                                <li>Identified and proposed bug fixes and usability improvements for a newly developed dashboard.</li>
+                                <li>Validated and corrected patient metrics using MySQL, improving data accuracy across over 30 clinics.</li>
+                            </ul>
+                            <div class="exp-skills">
+                                <span class="skill-pill">MySQL</span>
+                                <span class="skill-pill">Project Management</span>
+                                <span class="skill-pill">Data Reconciliation</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Exp 3 -->
+                    <div class="exp-item">
+                        <div class="exp-icon-wrapper">
+                            <i class="fa-solid fa-money-bill-trend-up"></i>
+                        </div>
+                        <div class="exp-content">
+                            <div class="exp-header">
+                                <h3>Business Partner Intern — Singapore Exchange</h3>
+                                <span class="exp-date">Jun 2025 – Sept 2025</span>
+                            </div>
+                            <ul>
+                                <li>Transformed financial data from Snowflake and SAP into monthly performance dashboards using Power Query.</li>
+                                <li>Reconciled revenue and expense data across business units to within 0.5% variance.</li>
+                            </ul>
+                            <div class="exp-skills">
+                                <span class="skill-pill">Power Query</span>
+                                <span class="skill-pill">Snowflake</span>
+                                <span class="skill-pill">SAP</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Exp 4 -->
+                    <div class="exp-item">
+                        <div class="exp-icon-wrapper">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                        <div class="exp-content">
+                            <div class="exp-header">
+                                <h3>Business Development Intern — Shopee (Seller Operations)</h3>
+                                <span class="exp-date">Aug 2024 – Dec 2024</span>
+                            </div>
+                            <ul>
+                                <li>Optimized drop-off points for affected sellers using ArcGIS geospatial network analysis.</li>
+                                <li>Automated whitelisting of eligible listings with Python scripts and performed impact analyses for delivery process changes.</li>
+                            </ul>
+                            <div class="exp-skills">
+                                <span class="skill-pill">Python</span>
+                                <span class="skill-pill">ArcGIS</span>
+                                <span class="skill-pill">Data Analysis</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Exp 5 -->
+                    <div class="exp-item">
+                        <div class="exp-icon-wrapper">
+                            <i class="fa-solid fa-microscope"></i>
+                        </div>
+                        <div class="exp-content">
+                            <div class="exp-header">
+                                <h3>Research Assistant — SUTD</h3>
+                                <span class="exp-date">May 2023 – Dec 2023</span>
+                            </div>
+                            <ul>
+                                <li>Analyzed metasurfaces with Python visualization tools and co-authored publication in Physical Review Letters.</li>
+                            </ul>
+                            <div class="exp-skills">
+                                <span class="skill-pill">Python</span>
+                                <span class="skill-pill">Data Visualization</span>
+                                <span class="skill-pill">Research</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCENE 4: EDUCATION (WITHIN THE FRAMED CERTIFICATE) -->
+        <section id="education" class="scene-section edu-section">
+            <div class="object-certificate interactive-object">
+                <div class="cert-crest-header">
+                    <h3>SINGAPORE UNIVERSITY OF TECHNOLOGY AND DESIGN</h3>
+                </div>
+
+                <div class="cert-body">
+                    <h4 class="cert-degree">Bachelor of Engineering (Engineering Systems &amp; Design)</h4>
+                    <p class="cert-honours"><i class="fa-solid fa-medal"></i> Honours (Highest Distinction)</p>
 
                     <div class="edu-badges">
-                        <span class="badge spec-badge">Specialization in Business Analytics & Operations Research</span>
-                        <span class="badge minor-badge">Minor in Computer Science</span>
+                        <span class="badge spec-badge"><i class="fa-solid fa-chart-pie"></i> Specialization in Business Analytics &amp; Operations Research</span>
+                        <span class="badge minor-badge"><i class="fa-solid fa-code"></i> Minor in Computer Science</span>
                     </div>
+                </div>
 
-                    <div class="edu-achievements">
-                        <div class="achievement-item">
-                            <i class="fa-solid fa-award"></i>
-                            <span>SUTD Global Distinguished Scholarship recipient</span>
-                        </div>
-                        <div class="achievement-item">
-                            <i class="fa-solid fa-medal"></i>
-                            <span>SUTD Honours List - Freshmore</span>
-                        </div>
-                        <div class="achievement-item">
-                            <i class="fa-solid fa-medal"></i>
-                            <span>SUTD Honours List - Sophomore & Junior</span>
-                        </div>
+                <div class="edu-achievements">
+                    <div class="achievement-item">
+                        <i class="fa-solid fa-award"></i>
+                        <span><strong>SUTD Global Distinguished Scholarship</strong> recipient</span>
+                    </div>
+                    <div class="achievement-item">
+                        <i class="fa-solid fa-medal"></i>
+                        <span><strong>SUTD Honours List</strong> — Freshmore</span>
+                    </div>
+                    <div class="achievement-item">
+                        <i class="fa-solid fa-medal"></i>
+                        <span><strong>SUTD Honours List</strong> — Sophomore &amp; Junior</span>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- SCENE 5: CONTACT (WITHIN THE LAPTOP SCREEN) -->
+        <section id="contact" class="scene-section contact-section">
+            <div class="object-laptop interactive-object">
+                <div class="laptop-webcam"></div>
+                <div class="laptop-titlebar">
+                    <div class="terminal-dots">
+                        <span style="background: #ff5f56;"></span>
+                        <span style="background: #ffbd2e;"></span>
+                        <span style="background: #27c93f;"></span>
+                    </div>
+                    <div class="terminal-title">junsiang@portfolio: ~/contact $ ./connect.sh</div>
+                    <div style="width: 40px;"></div>
+                </div>
 
-        <section id="contact" class="section">
-            <h2>Contact</h2>
+                <div class="laptop-display-content">
+                    <h2>&lt; Let’s Connect /&gt;</h2>
+                    <p>Have an exciting data analytics project, AI agent challenge, or role? Let’s talk.</p>
 
-            <div class="contact-container">
-                <div class="contact-item">
-                    <a href="mailto:lohjunsiang26@gmail.com" class="social-link">
-                        <i class="fa-solid fa-envelope"></i>
-                        <span>Email</span>
-                    </a>
-                    <a href="https://www.linkedin.com/in/loh-jun-siang-928a0122b/" target="_blank" class="social-link">
-                        <i class="fa-brands fa-linkedin"></i>
-                        <span>LinkedIn</span>
-                    </a>
-                    <a href="https://github.com/Juns26" target="_blank" class="social-link">
-                        <i class="fa-brands fa-github"></i>
-                        <span>GitHub</span>
-                    </a>
+                    <div class="contact-links-grid">
+                        <a href="mailto:lohjunsiang26@gmail.com" class="social-link-card">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>Email</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/loh-jun-siang-928a0122b/" target="_blank" class="social-link-card">
+                            <i class="fa-brands fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/Juns26" target="_blank" class="social-link-card">
+                            <i class="fa-brands fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                    </div>
+
+                    <div style="margin-top: 2rem;">
+                        <a href="#intro" class="btn ghost small">
+                            <i class="fa-solid fa-arrow-up"></i> Return to Wide Desk
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- Floating Back to Top Button -->
+    <a href="#intro" id="back-to-top" class="back-to-top-btn" title="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+        <span>Top</span>
+    </a>
+
     <footer>
-        <p>©
-            <script>document.write(new Date().getFullYear())</script> Loh Jun Siang
-        </p>
+        <p>© <script>document.write(new Date().getFullYear())</script> Loh Jun Siang • Built with Three.js &amp; CSS</p>
     </footer>
 </body>
 
