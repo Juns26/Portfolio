@@ -608,16 +608,6 @@ main {
   position: relative;
 }
 
-.exp-container::before {
-  content: '';
-  position: absolute;
-  top: 10px;
-  bottom: 10px;
-  left: 24px;
-  width: 2px;
-  background: #cbd5e1;
-}
-
 .exp-item {
   background: #ffffff;
   border: 1px solid #e2e8f0;
